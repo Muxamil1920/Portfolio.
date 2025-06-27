@@ -2,11 +2,11 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
-import leaf from "../../Assets/Projects/leaf.png";
-import emotion from "../../Assets/Projects/emotion.png";
+import Todos from "../../Assets/Projects/Todos.png";
+import world from "../../Assets/Projects/world_data.png";
 import Movie from "../../Assets/Projects/Movie_ratings.png";
 import sales from "../../Assets/Projects/sales.png";
-import suicide from "../../Assets/Projects/suicide.png";
+import hospital from "../../Assets/Projects/Hospital.png";
 import Mnist from "../../Assets/Projects/Mnist.png";
 
 function Projects() {
@@ -34,11 +34,22 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
+              imgPath={Todos}
+              isBlog={false}
+              title="Todos APP"
+              description="A simple and efficient ToDo application built using FastAPI. This project provides a RESTful API for managing tasks — allowing users to create, read, update, and delete todos with ease. Along with user autorization and authentication for login and register, the website is fully tested with pytest"
+              ghLink="https://github.com/Muxamil1920/FastAPI-Project-ToDo-s"
+              demoLink="https://fastapi-project-todo-s-4.onrender.com/auth/login-page"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
               imgPath={Mnist}
               isBlog={false}
               title="Hand Written Digits"
-              description="My personal blog page build with Next.js and Tailwind Css which takes the content from makdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown."
-              ghLink="https://github.com/soumyajit4419/Bits-0f-C0de"
+              description="Identifying handwritten digits using the TensorFlow framework and the MNIST dataset sourced from Kaggle."
+              ghLink="https://github.com/Muxamil1920/Deep-Learning/blob/main/MNIST.ipynb"
               // demoLink=""
             />
           </Col>
@@ -48,42 +59,30 @@ function Projects() {
               imgPath={Movie}
               isBlog={false}
               title="Fandango"
-              description="Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview.Both the editor supports auto save of work using Local Storage"
-              ghLink="https://github.com/soumyajit4419/Editor.io"
-              demoLink="https://editor.soumya-jit.tech/"              
+              description="This is the data behind the story Be Suspicious Of Online Movie Ratings, Especially Fandango’s openly available on 538's github: https://github.com/fivethirtyeight/data. There are two csv files, one with Fandango Stars and Displayed Ratings, and the other with aggregate data for movie ratings from other sites, like Metacritic,IMDB, and Rotten Tomatoes."
+              ghLink="https://github.com/Muxamil1920/Data_visualisation/blob/main/Movie_Ratings-Project.ipynb"
+              // demoLink="/"              
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={leaf}
+              imgPath={hospital}
               isBlog={false}
-              title="Plant AI"
-              description="Used the plant disease dataset from Kaggle and trained a image classifer model using 'PyTorch' framework using CNN and Transfer Learning with 38 classes of various plant leaves. The model was successfully able to detect diseased and healthy leaves of 14 unique plants. I was able to achieve an accuracy of 98% by using Resnet34 pretrained model."
-              ghLink="https://github.com/soumyajit4419/Plant_AI"
-              demoLink="https://plant49-ai.herokuapp.com/"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={suicide}
-              isBlog={false}
-              title="Ai For Social Good"
-              description="Using 'Natural Launguage Processing' for the detection of suicide-related posts and user's suicide ideation in cyberspace  and thus helping in sucide prevention."
-              ghLink="https://github.com/soumyajit4419/AI_For_Social_Good"
+              title="Hospital Management System"
+              description="A terminal-based Hospital Management System built using Python Django and MySQL. It allows administrators to manage patient records, doctor details, appointments, and billing efficiently. Designed for educational and demonstration purposes, this project showcases CRUD operations, database connectivity, and backend logic for real-world healthcare management systems"
+              ghLink="https://github.com/Muxamil1920/Hospital_Management"
               // demoLink="" <--------Please include a demo link here
             />
           </Col>
 
-          <Col md={4} className="project-card">
+          <Col md={4} className="">
             <ProjectCard
-              imgPath={emotion}
+              imgPath={world}
               isBlog={false}
-              title="Face Recognition and Emotion Detection"
-              description="Trained a CNN classifier using 'FER-2013 dataset' with Keras and tensorflow backened. The classifier sucessfully predicted the various types of emotions of human. And the highest accuracy obtained with the model was 60.1%.
-              Then used Open-CV to detect the face in an image and then pass the face to the classifer to predict the emotion of a person."
-              ghLink="https://github.com/soumyajit4419/Face_And_Emotion_Detection"
+              title="World Data"
+              description="This project explores unsupervised learning to group countries into meaningful clusters based on multiple socio-economic and demographic features. The goal is to understand global patterns and regional similarities using KMeans clustering."
+              ghLink="https://github.com/Muxamil1920/Machine-Learning-Models-Unsupervised/blob/main/KMeans-Cluster-world-Data.ipynb"
               // demoLink=""      <--------Please include a demo link here 
             />
           </Col>
